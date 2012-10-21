@@ -1,1 +1,33 @@
 <h1>Hello from Ruby on Rails</h1>
+<%= link_to "logout", sessions_path, :action => :delete %>
+<%= button_to "Logout", sessions_path, :action => :delete %>
+<table border="1">
+   <tr>
+      <th>Player Name</th>
+      <th>Course Name</th>
+      <th>Hole Number</th>
+      <th>Par</th>
+      <th>Score</th>
+   </tr>
+   <tr>
+     <td>Player One</td>
+     <td>Course One</td>
+     <td>Hole One</td>
+     <td>3</td>
+     <td>3</td>
+   </tr>
+   <tr>
+      <td>Player Two</td>
+      <td>Course Two</td>
+      <td>Hole Two</td>
+      <td>3</td>
+      <td>2</td>
+   </tr>
+   <tr>
+      <td>Player Three</td>
+      <td>Course Three</td>
+      <td>Hole Three</td>
+      <td>3</td>
+      <td>1</td>
+   </tr>
+</table>
