@@ -18,6 +18,6 @@ class SessionsController < ApplicationController
   #Delete the session for the current user.
   def destroy
     session[:current_user_id] = nil
-    redirect_to root_url, :notice => "You have succesfully logged out"
+    redirect_to root_url, :notice => "You have successfully logged out"
   end
 end
