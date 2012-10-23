@@ -1,6 +1,6 @@
 <h1>Hello from Ruby on Rails</h1>
 <%= link_to "logout", sessions_path, :action => :delete %>
-<%= button_to "Logout", sessions_path, :action => :delete %>
+<%= button_to "Logout", sessions_path, :method => "delete" %>
 <table border="1">
    <tr>
       <th>Player Name</th>
