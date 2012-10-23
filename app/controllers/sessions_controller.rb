@@ -6,7 +6,6 @@ class SessionsController < ApplicationController
   #Create the session for the user.
   def create
     user = User.where(:username => params[:username]).first
-    puts user.inspect
     if user and user.password == params[:password]
       session[:current_user_id] = user.id
       redirect_to homes_path
