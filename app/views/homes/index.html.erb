@@ -1,32 +1,56 @@
-<h1>Hello from Ruby on Rails</h1>
 <%= button_to "Logout", sessions_path, :method => "delete" %>
 <table border="1">
    <tr>
       <th>Player Name</th>
+      <th>Date</th>
       <th>Course Name</th>
-      <th>Hole Number</th>
-      <th>Par</th>
-      <th>Score</th>
+      <th>Course Par</th>
+      <th>Course Score</th>
    </tr>
+   <!--Add an each loop for all db records-->
    <tr>
      <td>Player One</td>
+     <td>04/12/2012</td>
      <td>Course One</td>
-     <td>Hole One</td>
      <td>3</td>
      <td>3</td>
+     <td><%= button_to "Edit", homes_path, :method => "update" %></td>
+     <td><%= button_to "Delete", homes_path, :method => "delete" %></td>
    </tr>
    <tr>
       <td>Player Two</td>
+      <td>06/12/2012</td>
       <td>Course Two</td>
-      <td>Hole Two</td>
       <td>3</td>
       <td>2</td>
    </tr>
    <tr>
       <td>Player Three</td>
+      <td>08/12/2012</td>
       <td>Course Three</td>
-      <td>Hole Three</td>
       <td>3</td>
       <td>1</td>
    </tr>
+   <!--Add an add button to add new records to db-->
+</table>
+<br /><br /><hr>
+<table>
+<%= form_for(homes_path, :method => "post") do %>
+  <tr>
+     <th><%= label_tag(:player, "Player Name ") %></th>
+     <th><%= label_tag(:date, "Date (00/00/0000) ") %></th>
+     <th><%= label_tag(:course, "Course Name/Location ") %></th>
+     <th><%= label_tag(:course_par, "Course Par") %></th>
+     <th><%= label_tag(:score, "Score") %></th>
+  </tr>
+
+  <tr>
+     <td><%= text_field_tag(:player) %></td>
+     <td><%= text_field_tag(:date) %></td>
+     <td><%= text_field_tag(:course) %></td>
+     <td><%= text_field_tag(:course_par) %></td>
+     <td><%= text_field_tag(:score) %></td>
+     <td><%= submit_tag("Add") %></td>
+  </tr>
+<% end %>
 </table>
