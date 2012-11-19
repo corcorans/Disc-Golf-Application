@@ -1,5 +1,6 @@
 class HomesController < ApplicationController
     def create
+      # validates :player, :date, :courses, :course_par, :score => true
       # Valid
       # Create new player with data in db
       # show on page
