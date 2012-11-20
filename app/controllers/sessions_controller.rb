@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
     user = User.where(:username => params[:username]).first
     if user and user.password == params[:password]
       session[:current_user_id] = user.id
-      redirect_to homes_path
+      redirect_to players_path
     else
       redirect_to root_url, :alert =>  "Invalid username or password"   
     end

@@ -1,11 +1,10 @@
-class CreateHomes < ActiveRecord::Migration
+class CreatePlayers < ActiveRecord::Migration
   def change
-    create_table :homes do |t|
-      t.string :index
+    create_table :players do |t|
       t.string :name
       t.date :date
       t.string :course_name
-      t.integer :course_par
+      t.integer :par
       t.integer :score
       t.timestamps
     end
