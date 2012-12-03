@@ -2,6 +2,8 @@
   <%= flash[:alert] %>
 <% elsif flash[:notice] %>
   <%= flash[:notice] %>
+<% elsif flash[:error] %>
+  <%= flash[:error] %>
 <% end %>
 
 <%= form_for(sessions_path, :method => "post") do %>

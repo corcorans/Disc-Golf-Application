@@ -81,4 +81,9 @@ class PlayersController < ApplicationController
       format.json { head :no_content }
     end
   end
+  
+  def SortByName
+    @player = Player.find( :all, :order => 'name' )
+  end
+  
 end
