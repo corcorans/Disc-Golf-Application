@@ -1,9 +1,18 @@
 <% if flash[:alert] %>
-  <%= flash[:alert] %>
+  <%= "<strong style='color:red;'>".html_safe %>
+  <%=  flash[:alert] %>
+  <%= '</strong>'.html_safe %>
+  <%= '<br /><br />'.html_safe %>
 <% elsif flash[:notice] %>
+  <%= "<strong style='color:green;'>".html_safe %>
   <%= flash[:notice] %>
+  <%= '</strong>'.html_safe %>
+  <%= '<br /><br />'.html_safe %>
 <% elsif flash[:error] %>
+  <%= "<strong style='color:blue;'>".html_safe %>
   <%= flash[:error] %>
+  <%= '</strong>'.html_safe %>
+  <%= '<br /><br />'.html_safe %>
 <% end %>
 
 <%= form_for(sessions_path, :method => "post") do %>
