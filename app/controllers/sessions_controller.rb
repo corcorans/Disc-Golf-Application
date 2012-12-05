@@ -1,10 +1,7 @@
 class SessionsController < ApplicationController
   
+  # Allows a user to access to login page if not logged in.
   skip_before_filter :require_login, :only => [:new, :create, :show]
-  
-  def index
-
-  end
 
   #Create the session for the user.
   def create
