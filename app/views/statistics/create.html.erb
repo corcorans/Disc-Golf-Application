@@ -1,0 +1,19 @@
+<h1>Statistics homepage</h1>
+
+<table border="1">
+  <tr>
+    <th>Course name</th>
+    <th>Average score</th>
+  </tr>
+  
+  <% @total.each do |t, v| %>
+    <tr>
+      <td><%= t %>
+      <td><%= v %>
+    </tr>
+  <% end %>
+</table>
+
+<br />
+
+<%= link_to 'Back', players_path %>
