@@ -11,12 +11,17 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121120010354) do
+ActiveRecord::Schema.define(:version => 20121210025346) do
 
   create_table "homes", :force => true do |t|
     t.string   "index"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.string   "name"
+    t.date     "date"
+    t.string   "course_name"
+    t.integer  "course_par"
+    t.integer  "score"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
   end
 
   create_table "players", :force => true do |t|
@@ -30,6 +35,11 @@ ActiveRecord::Schema.define(:version => 20121120010354) do
   end
 
   create_table "sessions", :force => true do |t|
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "statistics", :force => true do |t|
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
