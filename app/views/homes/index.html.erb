@@ -1,0 +1,52 @@
+<%= button_to "Logout", sessions_path, :method => "delete" %>
+<table border="1">
+   <tr>
+      <th>Player Name</th>
+      <th>Date</th>
+      <th>Course Name</th>
+      <th>Course Par</th>
+      <th>Course Score</th>
+      <!--Add sort list with label-->
+   </tr>
+   <tr>
+     <td>Player One</td>
+     <td>04/12/2012</td>
+     <td>Course One</td>
+     <td>3</td>
+     <td>3</td>
+     <td><%= button_to "Delete", homes_path, :method => "delete" %></td>
+   </tr>
+   <tr>
+      <td>Player Two</td>
+      <td>06/12/2012</td>
+      <td>Course Two</td>
+      <td>3</td>
+      <td>2</td>
+   </tr>
+   <tr>
+      <td>Player Three</td>
+      <td>08/12/2012</td>
+      <td>Course Three</td>
+      <td>3</td>
+      <td>1</td>
+   </tr>
+</table>
+<br /><br /><hr>
+<%= form_for(homes_path, :method => "post") do %>
+   <%= label_tag(:player, "Player Name ") %>
+   <%= text_field_tag(:player) %><br />
+
+   <%= label_tag(:date, "Date (00/00/0000) ") %>
+   <%= text_field_tag(:date) %><br />
+
+   <%= label_tag(:course, "Course Name ") %>
+   <%= text_field_tag(:course) %><br />
+
+   <%= label_tag(:course_par, "Course Par") %>
+   <%= text_field_tag(:course_par) %><br />
+
+   <%= label_tag(:score, "Score") %>
+   <%= text_field_tag(:score) %><br />
+
+   <%= submit_tag("Add") %>
+<% end %>
